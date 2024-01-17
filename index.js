@@ -8,6 +8,13 @@ const lineThrough = "line-through";
 
 let id = 0;
 
+const DATE = new Date();
+date.innerHTML = DATE.toLocaleDateString("en-US", {
+  weekday: "long",
+  month: "short",
+  day: "numeric",
+});
+
 const saveToLocalStorage = () => {
   const tasks = [];
   document.querySelectorAll(".task").forEach((taskElement) => {
